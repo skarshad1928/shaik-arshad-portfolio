@@ -23,7 +23,7 @@ const SKILL_GROUPS = [
   },
   {
     name: 'Delivery & Tooling',
-    skills: ['FastAPI', 'Streamlit', 'Django', 'Jupyter Notebook', 'Git', 'GitHub'],
+    skills: ['FastAPI', 'Streamlit', 'Dash', 'Django', 'Jupyter Notebook', 'Git', 'GitHub'],
   },
 ]
 
@@ -60,6 +60,22 @@ const PROJECTS = [
   },
   {
     index: '03',
+    name: 'Online Retail Analytics & Interactive Dashboard',
+    problem:
+      'An e-commerce business needed real-time visibility into customer buying patterns, product performance, RFM segmentation, and database schema relationships.',
+    stack: ['Python', 'Dash', 'Plotly', 'Pandas', 'Vercel'],
+    points: [
+      'Performed exploratory data analysis and customer RFM segmentation on transactions dataset to isolate core revenue drivers.',
+      'Designed relational database schema ERD models explaining entity relationships across orders, customers, and inventory.',
+      'Built and deployed an interactive Dash web application on Vercel featuring dynamic visual filters and cohort metrics.',
+    ],
+    links: [
+      { label: 'Live Vercel App', href: 'https://retail-store-app.vercel.app/' },
+      { label: 'View repository', href: 'https://github.com/skarshad1928/Retail-Store-App' },
+    ],
+  },
+  {
+    index: '04',
     name: 'Placement Prep — Aptitude & Verbal Skill Analyzer',
     problem:
       'Placement-prep question banks show a score, not a diagnosis. I wanted a tool that scores a candidate section by section — quantitative aptitude, verbal reasoning, and logical reasoning — and times each answer, so the output is an honest read on where reasoning actually breaks down instead of a single number.',
@@ -187,7 +203,7 @@ export default function App() {
                 <div className="kpi-label">CGPA / 10.0</div>
               </div>
               <div className="kpi">
-                <div className="kpi-value">3</div>
+                <div className="kpi-value">4</div>
                 <div className="kpi-label">End-to-end projects</div>
               </div>
               <div className="kpi">
@@ -213,11 +229,10 @@ export default function App() {
                 that hold up under real questions, not just demo conditions.
               </p>
               <p>
-                My two flagship projects reflect that — a star-schema <strong>Insurance Analytics
-                dashboard</strong> built on Power BI and DAX, and a <strong>Telecom Churn Prediction</strong>{' '}
-                system that takes a Logistic Regression model all the way from notebook to a deployed
-                FastAPI + Streamlit app. I'm most useful in the space between "the data is a mess" and
-                "here's what leadership should do about it."
+                My flagship projects reflect that — a star-schema <strong>Insurance Analytics
+                dashboard</strong> built on Power BI, a <strong>Telecom Churn Prediction</strong> system
+                deployed on FastAPI + Streamlit, and an interactive <strong>Online Retail Dashboard</strong> built with Plotly Dash.
+                I'm most useful in the space between "the data is a mess" and "here's what leadership should do about it."
               </p>
             </div>
             <div>
@@ -264,10 +279,10 @@ export default function App() {
         <section id="projects">
           <div className="shell">
             <p className="eyebrow">Page 3 — Projects</p>
-            <h2 className="section-title">Three problems, worked end to end</h2>
+            <h2 className="section-title">Four problems, worked end to end</h2>
             <p className="section-sub">
               Each one starts from a stated problem and ends in something a real user can open and
-              use — including a live tool below that scores your own attempt, not a staged one.
+              use — including live analytical dashboards and scored assessment tools below.
             </p>
             <div className="projects-list">
               {PROJECTS.map((project) => (
